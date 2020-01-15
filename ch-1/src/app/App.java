@@ -5,7 +5,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello Java");
 
-        UserDao dao = new UserDao();
+        UserDao1 dao = new UserDao1();
         User user = new User();
         user.setId("yjy");
         user.setName("여준영");
