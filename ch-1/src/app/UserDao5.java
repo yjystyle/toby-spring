@@ -26,7 +26,7 @@ public class UserDao5 {
      */
     public void add(User user) throws ClassNotFoundException, SQLException {
         
-        Connection c = connectionMaker.makeconnection();
+        Connection c = connectionMaker.makeConnection();
         
         // 내장 DB인 h2를 사용하면서 table이 존재하지 않기 때문에 책과 다르게 CREATE 쿼리를 실행하는 로직이 필요했다.
         PreparedStatement psC = c.prepareStatement("CREATE TABLE USERS (ID VARCHAR(20) PRIMARY KEY, NAME VARCHAR(20) NOT NULL, PASSWORD VARCHAR(10) NOT NULL)");
@@ -46,7 +46,7 @@ public class UserDao5 {
     
 
     public User get(String id) throws ClassNotFoundException, SQLException {
-        Connection c = connectionMaker.makeconnection();
+        Connection c = connectionMaker.makeConnection();
 
         PreparedStatement ps = c.prepareStatement("select * from users where id = ?");
         ps.setString(1, id);
