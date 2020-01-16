@@ -9,13 +9,11 @@ import java.sql.SQLException;
 /**
  * SimpleConnectionMaker 라는 클래스를 만들고 UserDao4가 이용한다.
  */
-public class UserDao5 {
+public class UserDao6 {
 
     private ConnectionMaker connectionMaker;
-    UserDao5(){
-        // 상태를 관리하는 것도 아니니 한 번만 만들어 인스턴스 변수에 저장해두고 메소드에서 사용하게 한다.
-        // 자신이 사용할 오브젝트를 직접 만들어서, 자신과 관계를 만들어버리는 것이 UserDao5의 생성자가 하는 일이다.
-        connectionMaker = new DConnectionMaker();
+    UserDao6(ConnectionMaker connectionMaker){
+        this.connectionMaker = connectionMaker;
     }
    
     /**
