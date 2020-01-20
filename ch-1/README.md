@@ -49,7 +49,6 @@ public class DaoFactory {
 * UserDaoTest2는 DaoFactory가 만들고 초기화해서 자신에게 사용하도록 공급해주는 ConnectionMaker를 사용할 수 밖에 없다. 
 * 게다가 UserDao와 ConnectionMAker의 구현체를 생성하는 책임도 DaoFactory가 맡고 있다.
 
-## 스프링의 IoC
-본격적으로 Spring을 써보자.
+
 
 
