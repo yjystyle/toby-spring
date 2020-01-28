@@ -6,8 +6,13 @@ package app;
 public class UserDaoTest2 {
 
     public static void main(String[] args) throws Exception {
-        UserDao6 userDao = new DaoFactory().userDao6();   
-        
+        DaoFactory factory = new DaoFactory();
+        UserDao6 userDao = factory.userDao6();   
+        UserDao6 userDao2 = factory.userDao6();   
+
+        System.out.println(userDao==userDao2);
+
+
         // User user = new User();
         // user.setId("yjy");
         // user.setName("여준영");
